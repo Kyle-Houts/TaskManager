@@ -34,10 +34,9 @@ class Menu {
     
     
     
-    
+    // Function prints the menu
     func help() {
         print("""
-
 
         Main Menu
         1. Create new task
@@ -45,12 +44,14 @@ class Menu {
         3. See completed tasks
         4. See uncompleted tasks
         5. Mark a task as complete
-        6. Delete a task
-        7. Menu
-        8. Exit
+        6. Edit a task
+        7. Delete a task
+        8. Menu
+        9. Exit
         """)
     }
     
+    // Function directs to other functions based on user input
     func handleInput(_ input: String) {
         switch input {
         case "1":
@@ -69,24 +70,29 @@ class Menu {
             functions.markCompleted()
             help()
         case "6":
-            functions.deleteTask()
+            functions.editTask()
             help()
         case "7":
+            functions.deleteTask()
             help()
         case "8":
+            help()
+        case "9":
             quit()
         default:
             break
         }
     }
     
+    // Function quits task manager
     func quit() {
         shouldQuit = true
         print("Thanks for coming")
     }
     
+    
     func validateInput (_ input: String) -> Bool {
-        let menuOptions = Array(0...8)
+        let menuOptions = Array(1...9)
         
         guard let number = Int(input) else {return false}
         

@@ -12,10 +12,16 @@ class Task {
     
     var task: String
     var completed = false
+    var priority: Int
+//    var completeByDate: Date
     
-    init(task: String) {
+
+    
+    init(task: String, priority: Int) {
         self.task = task
         self.completed = false
+        self.priority = priority
+//        self.completeByDate = completeByDate
     }
     
     
