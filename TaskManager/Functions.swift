@@ -135,7 +135,6 @@ class Functions {
 //        print("Please enter the priority of the task from 1-5:")
 //
 //        var userInput3 = Task(task: userInput2, priority: Int(readLine()!)!)
-       
     }
 }
 
