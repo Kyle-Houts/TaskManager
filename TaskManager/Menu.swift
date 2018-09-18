@@ -44,10 +44,11 @@ class Menu {
         3. See completed tasks
         4. See uncompleted tasks
         5. Mark a task as complete
-        6. Edit a task
-        7. Delete a task
-        8. Menu
-        9. Exit
+        6. Mark a task as uncomplete
+        7. Edit a task
+        8. Delete a task
+        9. Menu
+        10. Exit
         """)
     }
     
@@ -70,14 +71,17 @@ class Menu {
             functions.markCompleted()
             help()
         case "6":
-            functions.editTask()
+            functions.markUncompleted()
             help()
         case "7":
-            functions.deleteTask()
+            functions.editTask()
             help()
         case "8":
+            functions.deleteTask()
             help()
         case "9":
+            help()
+        case "10":
             quit()
         default:
             break

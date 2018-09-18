@@ -10,23 +10,21 @@ import Foundation
 
 class Task {
     
-    var task: String
+    var title: String
+    var details: String
     var completed = false
     var priority: Int
-//    var completeByDate: Date
+    
     
 
     
-    init(task: String, priority: Int) {
-        self.task = task
+    init(title: String, priority: Int, details: String) {
+        self.title = title
+        self.details = details
         self.completed = false
         self.priority = priority
-//        self.completeByDate = completeByDate
+        
     }
-    
-    
-
-    
 
 }
 
